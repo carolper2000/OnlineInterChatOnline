@@ -1,5 +1,5 @@
 <% for (var i =1; i <=10;  i++ ) { %>
-    <li class="nav-item"><a class="nav-link" href=<%= './chatroom-' + i %> >Salon de chat <%= i %> </a></li>
+    <li class="nav-item"><a class="nav-link" href=<%= './chatroom-' + i %> > <%- __('chatroom')%> <%= i %> </a></li>
     <%#  Boucle pour afficher les salons de 1 à 10 %>
 <% } %>
 <li class="nav-item"><a id="ShowMore" onclick="ShowMore()" class="nav-link" href="#ShowLess">Afficher plus</a></li>

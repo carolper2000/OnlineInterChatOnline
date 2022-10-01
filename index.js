@@ -4,8 +4,15 @@
 // du routage et des sockets
 //-----------------------------------------------------------------------------------------------------------------
 // Déclaration variables / constantes
+const i18n = require('i18n');
+i18n.configure({
+  locales: ['en', 'fr'],
+  defaultLocale: 'fr',
+  directory: __dirname + '/locales'
+});
 const express = require("express");       // Utilisation du module "Express"
 const app = express();                    // Le serveur utilise express
+app.use(i18n.init);
 const http = require("http").Server(app); // Création du serveur http pour traiter les requêtes
 var favicon = require('serve-favicon');   // Déclaration de la favicon.
 let port = process.env.PORT;              // Détermination du port utilisé (Heroku définit un port par défaut)
