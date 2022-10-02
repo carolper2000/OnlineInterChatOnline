@@ -4,15 +4,19 @@
 // du routage et des sockets
 //-----------------------------------------------------------------------------------------------------------------
 // Déclaration variables / constantes
-const i18n = require('i18n');
-i18n.configure({
-  locales: ['en', 'fr'],
-  defaultLocale: 'fr',
-  directory: __dirname + '/locales'
-});
 const express = require("express");       // Utilisation du module "Express"
 const app = express();                    // Le serveur utilise express
+// Setup i18n
+const i18n = require('i18n');
+i18n.configure({                      // i18n configuration //
+  locales: ['en', 'fr'],              // Locales supported by the application
+  defaultLocale: 'en',                // Fall back to English if the browser's language is not supported
+  directory: __dirname + '/locales',  // Location of the JSON translation files
+  updateFiles: false,                 // Do not add a key automatically on the JSON file if it doesn't exist
+  objectNotation: true                // Allow to use key.subKey syntax
+});
 app.use(i18n.init);
+// -----
 const http = require("http").Server(app); // Création du serveur http pour traiter les requêtes
 var favicon = require('serve-favicon');   // Déclaration de la favicon.
 let port = process.env.PORT;              // Détermination du port utilisé (Heroku définit un port par défaut)
@@ -47,7 +51,7 @@ app.get('/chatroom-:id([0-9]+)', function(req, res) {
 
 //-----------------------------------------------------------------------------------------------------------------
 // Partie de gestion des logs
-console.log(`L'aplication es démarrée sur le port: ${ port }`); // écriture dans les logs CLI que l'application tourne sur le port "x"
+console.log(`L'aplication est démarrée sur le port: ${ port }`); // écriture dans les logs CLI que l'application tourne sur le port "x"
 
 // Fonction appellée pour logger une connexion à un salon.
 function logconnection(req) {
