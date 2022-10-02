@@ -4,7 +4,8 @@
   "description": "Projet de chat dans le cadre des portes ouvertes de l'EPTM",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "watch": "nodemon index.js"
   },
   "author": "NoeJuza",
   "license": "ISC",
