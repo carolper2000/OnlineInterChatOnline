@@ -1,6 +1,6 @@
 <% for (var i =1; i <=10;  i++ ) { %>
-    <li class="nav-item"><a class="nav-link" href=<%= './chatroom-' + i %> > <%- __('chatroom')%> <%= i %> </a></li>
+    <li class="nav-item"><a class="nav-link" href=<%= './chatroom-' + i %> > <%- __('navbar.chatroom')%> <%= i %> </a></li>
     <%#  Boucle pour afficher les salons de 1 à 10 %>
 <% } %>
-<li class="nav-item"><a id="ShowMore" onclick="ShowMore()" class="nav-link" href="#ShowLess">Afficher plus</a></li>
-<li class="nav-item"><a id="ShowLess" onclick="ShowLess()" class="nav-link" href="#ShowMore">Afficher moins</a></li>
+<li class="nav-item"><a id="ShowMore" onclick="ShowMore()" class="nav-link" href="#ShowLess"> <%- __('navbar.showMore') %> </a></li>
+<li class="nav-item"><a id="ShowLess" onclick="ShowLess()" class="nav-link" href="#ShowMore"> <%- __('navbar.showLess') %> </a></li>

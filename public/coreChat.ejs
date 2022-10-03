@@ -5,7 +5,7 @@
         <ul id="messages"></ul>
         <!--Div pour les erreurs-->
         <div id="errors"class="alert alert-warning" role="alert">
-            Veuillez vous connecter pour commencer à chatter.
+            <%- __('chatroom.loginToChat') %>
         </div>
     </div>
         <!--Div pour les erreurs-->
@@ -13,10 +13,10 @@
         <!--Div de chat (input + btn)-->
         <div id="divform" class="form-row">
             <div id="divinput" class="col-auto">
-                <input id="txt" rows="1" class="form-control" autocomplete="off" autofocus="on" placeholder="Écrivez ici..." >
+                <input id="txt" rows="1" class="form-control" autocomplete="off" autofocus="on" placeholder="<%- __('chatroom.typeHere') %>" >
             </div>
             <div id="divbtn" class="col-auto">
-                <button class="btn btn-primary">Envoyer</button>
+                <button class="btn btn-primary"> <%- __('chatroom.send') %> </button>
             </div>
         </div>
                 <!--Div de chat (input + btn)-->

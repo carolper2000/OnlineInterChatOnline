@@ -1,3 +1,39 @@
 {
-	"chatroom": "Chatroom"
+	"index": {
+		"welcomeCard": {
+			"header": "Welcome",
+			"title": "Welcome to \"OnlineInterChat\"",
+			"text": "This project is part of the \"DEV\" orientation of EPTM, made by Noé Juzan, 3rd year apprentice at EPTM."
+		},
+		"whatIsItCard": {
+			"header": "OnlineInterChat ?",
+			"title": "What's OnlineInterChat ?",
+			"text": "OnlineInterChat is a chatting platform which can be either deployed locally, to allow employees of a company on a same network to discuss without the whole Internet being informed on their exchanged messages. Or it can be deployed on the Internet to allow multiple people from around the globe to discuss via the Internet and exchange on different topics. Our application is inspired from IRC and its equivalents on the fact that it's a \"session-based\" chat. Which means that no message is stored. We've made this choice firstly for data security reasons, but also because the app needs to be optimized for usage on a mobile phone. If we were to load a huge amount of messages while the page is loading, by the time the previous messages are displayed, the user may have already left the web page."
+		},
+		"whatNowCard": {
+			"header": "What now?",
+			"title": "How do I start chatting?",
+			"text": "Now that you're here, you're surely wondering: \"How do I start chatting?\" Well! It's very simple, you just need to click on the small menu icon on the top right of the screen and choose a \"Chat room\" by clicking on it. You'll then be prompted to enter a username."
+		}
+	},
+	"navbar": {
+		"chatroom": "Chatroom",
+		"showLess": "Show less",
+		"showMore": "Show more"
+	},
+	"chatroom": {
+		"loginToChat": "Please login to start chatting.",
+		"typeHere": "Type here...",
+		"send": "Send"
+	},
+	"footer": {
+		"madeBy": {
+			"title": "Made by",
+			"content": "Noé Juzan "
+		},
+		"privacyPolicy": {
+			"part1": "By browsing this site you agree to our ",
+			"part2": "Privacy Policy"
+		}
+	}
 }
